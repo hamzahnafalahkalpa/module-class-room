@@ -3,8 +3,8 @@
     "description": "Master Module Class Room",
     "type": "library",
     "require": {
-        "zahzah/laravel-support": "1.x",
-        "gii/module-service": "1.x"
+        "hanafalah/laravel-support": "1.x",
+        "hanafalah/module-service": "1.x"
     },
     "autoload": {
         "psr-4": {

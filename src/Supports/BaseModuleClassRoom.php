@@ -2,9 +2,10 @@
 
 namespace Gilanggustina\ModuleClassRoom\Supports;
 
-use Zahzah\LaravelSupport\Supports\PackageManagement;
+use Hanafalah\LaravelSupport\Supports\PackageManagement;
 
-class BaseModuleClassRoom extends PackageManagement{
+class BaseModuleClassRoom extends PackageManagement
+{
     /** @var array */
     protected $__module_class_room_config = [];
 
@@ -15,7 +16,8 @@ class BaseModuleClassRoom extends PackageManagement{
      * @throws Exception description of exception
      * @return void
      */
-    public function __construct(){
-        $this->setConfig('module-class-room',$this->__module_class_room_config);
-    }    
-}   
+    public function __construct()
+    {
+        $this->setConfig('module-class-room', $this->__module_class_room_config);
+    }
+}

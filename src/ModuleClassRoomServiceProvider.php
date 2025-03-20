@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Gilanggustina\ModuleClassRoom;
 
-use Zahzah\LaravelSupport\Providers\BaseServiceProvider;
+use Hanafalah\LaravelSupport\Providers\BaseServiceProvider;
 
 class ModuleClassRoomServiceProvider extends BaseServiceProvider
 {
@@ -16,9 +16,10 @@ class ModuleClassRoomServiceProvider extends BaseServiceProvider
     public function register()
     {
         $this->registerMainClass(ModuleClassRoom::class)
-             ->registerCommandService(Providers\CommandServiceProvider::class)
-             ->registers([
-                '*','Services' => function(){
+            ->registerCommandService(Providers\CommandServiceProvider::class)
+            ->registers([
+                '*',
+                'Services' => function () {
                     $this->binds([
                         Contracts\ModuleClassRoom::class => new ModuleClassRoom(),
                         Contracts\ClassRoom::class => new Schemas\ClassRoom()
@@ -32,11 +33,13 @@ class ModuleClassRoomServiceProvider extends BaseServiceProvider
      *
      * @return string
      */
-    protected function dir(): string{
-        return __DIR__.'/';
+    protected function dir(): string
+    {
+        return __DIR__ . '/';
     }
 
-    protected function migrationPath(string $path = ''): string{
+    protected function migrationPath(string $path = ''): string
+    {
         return database_path($path);
     }
 }

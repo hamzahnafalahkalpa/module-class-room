@@ -1,11 +1,11 @@
-<?php 
+<?php
 
 use Gilanggustina\ModuleClassRoom\{
     Models,
     Commands as ModuleClassRoomCommands,
     Contracts
 };
-use Gii\ModuleMedicService\Models\MedicService ;
+use Hanafalah\ModuleMedicService\Models\MedicService;
 
 return [
     'contracts'  => [
