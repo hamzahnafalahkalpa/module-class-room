@@ -1,10 +1,10 @@
 <?php
 
-namespace Gilanggustina\ModuleClassRoom\Schemas;
+namespace Hanafalah\ModuleClassRoom\Schemas;
 
 use Illuminate\Database\Eloquent\Builder;
-use Gilanggustina\ModuleClassRoom\Contracts;
-use Gilanggustina\ModuleClassRoom\Resources\ClassRoom\ViewClassRoom;
+use Hanafalah\ModuleClassRoom\Contracts;
+use Hanafalah\ModuleClassRoom\Resources\ClassRoom\ViewClassRoom;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Hanafalah\LaravelSupport\Supports\PackageManagement;

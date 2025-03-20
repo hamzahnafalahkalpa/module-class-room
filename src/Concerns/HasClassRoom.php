@@ -1,15 +1,15 @@
 <?php
 
-namespace Gilanggustina\Moduletreatment\Concerns;
+namespace Hanafalah\Moduletreatment\Concerns;
 
-trait HasClassRoom {
+trait HasClassRoom
+{
     protected $__foreign_key = 'treatment_id';
 
-    protected static function bootHasClassRoom(){
+    protected static function bootHasClassRoom() {}
 
-    }
-
-    public function initializeHasClassRoom(){
+    public function initializeHasClassRoom()
+    {
         $this->mergeFillable([
             $this->__foreign_key
         ]);

@@ -1,8 +1,9 @@
 <?php
 
-namespace Gilanggustina\ModuleClassRoom\Enums\MedicService;
+namespace Hanafalah\ModuleClassRoom\Enums\MedicService;
 
-enum MedicServiceFlag: string {
+enum MedicServiceFlag: string
+{
     case VERLOS_KAMER    = 'VK';
     case INPATIENT       = 'INPATIENT';
 }

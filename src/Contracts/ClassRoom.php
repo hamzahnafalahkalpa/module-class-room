@@ -1,6 +1,6 @@
 <?php
 
-namespace Gilanggustina\ModuleClassRoom\Contracts;
+namespace Hanafalah\ModuleClassRoom\Contracts;
 
 use Hanafalah\LaravelSupport\Contracts\DataManagement;
 use Illuminate\Contracts\Database\Eloquent\Builder;

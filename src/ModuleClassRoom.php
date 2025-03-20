@@ -1,9 +1,7 @@
 <?php
 
-namespace Gilanggustina\ModuleClassRoom;
+namespace Hanafalah\ModuleClassRoom;
 
-use Gilanggustina\ModuleClassRoom\Supports\BaseModuleClassRoom;
+use Hanafalah\ModuleClassRoom\Supports\BaseModuleClassRoom;
 
-class ModuleClassRoom extends BaseModuleClassRoom{
-  
-}
+class ModuleClassRoom extends BaseModuleClassRoom {}

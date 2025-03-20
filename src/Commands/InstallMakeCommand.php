@@ -1,8 +1,9 @@
 <?php
 
-namespace Gilanggustina\ModuleClassRoom\Commands;
+namespace Hanafalah\ModuleClassRoom\Commands;
 
-class InstallMakeCommand extends EnvironmentCommand{
+class InstallMakeCommand extends EnvironmentCommand
+{
     /**
      * The name and signature of the console command.
      *
@@ -23,7 +24,7 @@ class InstallMakeCommand extends EnvironmentCommand{
      */
     public function handle()
     {
-        $provider = 'Gilanggustina\ModuleClassRoom\ModuleTreatmentServiceProvider';
+        $provider = 'Hanafalah\ModuleClassRoom\ModuleTreatmentServiceProvider';
 
         $this->comment('Installing Module Treatment...');
         $this->callSilent('vendor:publish', [
@@ -43,6 +44,6 @@ class InstallMakeCommand extends EnvironmentCommand{
         ]);
         $this->info('✔️  App table migrated');
 
-        $this->comment('gilanggustina/module-class-room installed successfully.');
+        $this->comment('hanafalah/module-class-room installed successfully.');
     }
 }

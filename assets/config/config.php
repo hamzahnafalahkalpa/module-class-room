@@ -1,6 +1,6 @@
 <?php
 
-use Gilanggustina\ModuleClassRoom\{
+use Hanafalah\ModuleClassRoom\{
     Models,
     Commands as ModuleClassRoomCommands,
     Contracts

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Gilanggustina\ModuleClassRoom;
+namespace Hanafalah\ModuleClassRoom;
 
 use Hanafalah\LaravelSupport\Providers\BaseServiceProvider;
 

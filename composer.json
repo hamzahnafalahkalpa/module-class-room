@@ -1,5 +1,5 @@
 {
-    "name": "gilanggustina/module-class-room",
+    "name": "hanafalah/module-class-room",
     "description": "Master Module Class Room",
     "type": "library",
     "require": {
@@ -8,7 +8,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Gilanggustina\\ModuleClassRoom\\": "src/"
+            "Hanafalah\\ModuleClassRoom\\": "src/"
         }
     },
     "authors": [

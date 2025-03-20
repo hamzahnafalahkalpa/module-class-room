@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Gilanggustina\ModuleClassRoom\Providers;
+namespace Hanafalah\ModuleClassRoom\Providers;
 
-use Gilanggustina\ModuleClassRoom\Commands;
+use Hanafalah\ModuleClassRoom\Commands;
 use Illuminate\Support\ServiceProvider;
 
 class CommandServiceProvider extends ServiceProvider
@@ -14,8 +14,9 @@ class CommandServiceProvider extends ServiceProvider
     ];
 
 
-    public function register(){
-        $this->commands(config('module-class-room.commands',$this->commands));
+    public function register()
+    {
+        $this->commands(config('module-class-room.commands', $this->commands));
     }
     /**
      * Get the services provided by the provider.

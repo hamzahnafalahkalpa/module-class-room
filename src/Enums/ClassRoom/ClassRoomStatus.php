@@ -1,8 +1,9 @@
 <?php
 
-namespace Gilanggustina\ModuleClassRoom\Enums\ClassRoom;
+namespace Hanafalah\ModuleClassRoom\Enums\ClassRoom;
 
-enum ClassRoomStatus: int{
+enum ClassRoomStatus: int
+{
     case DRAFT    = 0;
     case ACTIVE   = 1;
     case INACTIVE = 2;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Gilanggustina\ModuleClassRoom\Resources\ClassRoom;
+namespace Hanafalah\ModuleClassRoom\Resources\ClassRoom;
 
 use Illuminate\Http\Request;
 use Hanafalah\LaravelSupport\Resources\ApiResource;

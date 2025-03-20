@@ -1,9 +1,9 @@
 <?php
 
-namespace Gilanggustina\ModuleClassRoom\Models\ClassRoom;
+namespace Hanafalah\ModuleClassRoom\Models\ClassRoom;
 
-use Gilanggustina\ModuleClassRoom\Enums\ClassRoom\ClassRoomStatus;
-use Gilanggustina\ModuleClassRoom\Resources\ClassRoom\ViewClassRoom;
+use Hanafalah\ModuleClassRoom\Enums\ClassRoom\ClassRoomStatus;
+use Hanafalah\ModuleClassRoom\Resources\ClassRoom\ViewClassRoom;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Hanafalah\LaravelSupport\Models\BaseModel;
 use Hanafalah\LaravelHasProps\Concerns\HasProps;
