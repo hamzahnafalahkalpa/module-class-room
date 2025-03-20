@@ -1,0 +1,21 @@
+{
+    "name": "gilanggustina/module-class-room",
+    "description": "Master Module Class Room",
+    "type": "library",
+    "require": {
+        "zahzah/laravel-support": "1.x",
+        "gii/module-service": "1.x"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gilanggustina\\ModuleClassRoom\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Cahaya Gilang Gustina",
+            "email": "cgg01082000@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
