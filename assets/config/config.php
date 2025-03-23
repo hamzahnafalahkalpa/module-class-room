@@ -15,6 +15,10 @@ return [
     'commands'   => [
         ModuleClassRoomCommands\InstallMakeCommand::class
     ],
+    'libs' => [
+        'model' => 'Models',
+        'contract' => 'Contracts'
+    ],
     'database' => [
         'models' => [
             'ClassRoom'    => Models\ClassRoom\ClassRoom::class,
