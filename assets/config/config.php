@@ -5,20 +5,28 @@ use Hanafalah\ModuleClassRoom\{
     Commands as ModuleClassRoomCommands,
     Contracts
 };
-use Hanafalah\ModuleMedicService\Models\MedicService;
 
 return [
-    'contracts'  => [
-        'class_room'        => Contracts\ClassRoom::class,
-        'module_class_room' => Contracts\ModuleClassRoom::class
+    'namespace' => 'Hanafalah\\ModuleClassRoom',
+    'app' => [
+        'contracts' => [
+            //ADD YOUR CONTRACTS HERE
+        ]
+    ],
+    'libs' => [
+        'model' => 'Models',
+        'contract' => 'Contracts',
+        'schema' => 'Schemas',
+        'database' => 'Database',
+        'data' => 'Data',
+        'resource' => 'Resources',
+        'migration' => '../assets/database/migrations'
+    ],
+    'database' => [
+        'models' => [
+        ]
     ],
     'commands'   => [
         ModuleClassRoomCommands\InstallMakeCommand::class
     ],
-    'database' => [
-        'models' => [
-            'ClassRoom'    => Models\ClassRoom\ClassRoom::class,
-            'MedicService' => MedicService::class,
-        ]
-    ]
 ];
