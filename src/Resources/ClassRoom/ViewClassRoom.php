@@ -19,6 +19,7 @@ class ViewClassRoom extends ApiResource
       'id'         => $this->id,
       'name'       => $this->name,
       'service_id' => $this->service_id,
+      'service'    => $this->prop_service,
       'created_at' => $this->created_at,
       'updated_at' => $this->updated_at
     ];
