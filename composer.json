@@ -1,7 +1,6 @@
 {
     "name": "hanafalah/module-class-room",
     "description": "Master Module Class Room",
-    "type": "library",
     "require": {
         "hanafalah/laravel-support": "1.x-dev as 1.0",
         "hanafalah/module-service": "1.x-dev as 1.0"
@@ -13,9 +12,16 @@
     },
     "authors": [
         {
-            "name": "Cahaya Gilang Gustina",
-            "email": "cgg01082000@gmail.com"
+            "name": "hamzah",
+            "email": "hamzahnafalah@gmail.com"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hanafalah\\ModuleClassRoom\\ModuleClassRoomServiceProvider"
+            ]
+        }
+    },
     "minimum-stability": "dev"
 }

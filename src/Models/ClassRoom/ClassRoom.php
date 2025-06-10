@@ -7,11 +7,15 @@ use Hanafalah\ModuleClassRoom\Resources\ClassRoom\ViewClassRoom;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Hanafalah\LaravelSupport\Models\BaseModel;
 use Hanafalah\LaravelHasProps\Concerns\HasProps;
+use Illuminate\Database\Eloquent\Concerns\HasUlids;
 
 class ClassRoom extends BaseModel
 {
-    use SoftDeletes, HasProps;
+    use HasUlids, SoftDeletes, HasProps;
 
+    public $incrementing = false;
+    protected $keyType = 'string';
+    protected $primaryKey = 'id';
     protected $table = 'class_rooms';
     protected $show = ['props'];
     protected $list = ['id', 'name', 'props'];
@@ -26,6 +30,14 @@ class ClassRoom extends BaseModel
         static::creating(function ($query) {
             if (!isset($query->status)) $query->status = ClassRoomStatus::ACTIVE->value;
         });
+    }
+
+    public function viewUsingRelation(): array{
+        return ['service'];
+    }
+
+    public function showUsingRelation(): array{
+        return ['service'];
     }
 
     public function getViewResource()

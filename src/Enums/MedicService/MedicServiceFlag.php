@@ -2,7 +2,7 @@
 
 namespace Hanafalah\ModuleClassRoom\Enums\MedicService;
 
-enum MedicServiceFlag: string
+enum Label: string
 {
     case VERLOS_KAMER    = 'VK';
     case INPATIENT       = 'INPATIENT';

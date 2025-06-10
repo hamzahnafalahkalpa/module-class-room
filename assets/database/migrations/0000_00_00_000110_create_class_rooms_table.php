@@ -1,20 +1,23 @@
 <?php
 
-use Hanafalah\ModuleMedicService\Models\MedicService;
+use Hanafalah\LaravelSupport\Concerns\NowYouSeeMe;
 use Hanafalah\ModuleTreatment\Enums\Treatment\TreatmentStatus;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Hanafalah\ModuleClassRoom\Models\ClassRoom\ClassRoom;
+use Hanafalah\ModuleService\Models\Service;
 
 return new class extends Migration
 {
+    use NowYouSeeMe;
+    
     private $__table, $__table_medic_service;
 
     public function __construct()
     {
         $this->__table = app(config('database.models.ClassRoom', ClassRoom::class));
-        $this->__table_medic_service = app(config('database.models.MedicService', MedicService::class));
+        $this->__table_medic_service = app(config('database.models.Service', Service::class));
     }
 
     /**
@@ -27,7 +30,7 @@ return new class extends Migration
         $table_name = $this->__table->getTable();
         if (!$this->isTableExists()) {
             Schema::create($table_name, function (Blueprint $table) {
-                $table->id();
+                $table->ulid('id')->primary();
                 $table->string('name')->nullable(false);
                 $table->tinyInteger('status')->default(TreatmentStatus::ACTIVE->value);
                 $table->json('props')->nullable();
@@ -36,7 +39,8 @@ return new class extends Migration
             });
 
             Schema::table($table_name, function (Blueprint $table) {
-                $table->foreignIdFor($this->__table_medic_service, 'medic_service_id')->nullable()->after('id')->index()->constrained()->cascadeOnUpdate()->restrictOnDelete();
+                $table->foreignIdFor($this->__table_medic_service)->nullable()
+                      ->after('id')->index()->constrained()->cascadeOnUpdate()->restrictOnDelete();
             });
         }
     }

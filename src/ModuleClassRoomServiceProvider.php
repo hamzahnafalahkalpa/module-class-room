@@ -17,15 +17,7 @@ class ModuleClassRoomServiceProvider extends BaseServiceProvider
     {
         $this->registerMainClass(ModuleClassRoom::class)
             ->registerCommandService(Providers\CommandServiceProvider::class)
-            ->registers([
-                '*',
-                'Services' => function () {
-                    $this->binds([
-                        Contracts\ModuleClassRoom::class => new ModuleClassRoom(),
-                        Contracts\ClassRoom::class => new Schemas\ClassRoom()
-                    ]);
-                }
-            ]);
+            ->registers(['*']);
     }
 
     /**
