@@ -25,7 +25,7 @@ class ClassRoom extends PackageManagement implements Contracts\Schemas\ClassRoom
         $class_room = $this->classRoom()->updateOrCreate([
             'id' => $class_room_dto->id ?? null
         ], [
-            'name' => $class_room_dto->name,
+            'name'       => $class_room_dto->name,
             'service_id' => $class_room_dto->service_id
         ]);
         $this->fillingProps($class_room,$class_room_dto->props);
