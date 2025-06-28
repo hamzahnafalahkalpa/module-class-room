@@ -2,4 +2,6 @@
 
 namespace Hanafalah\ModuleClassRoom\Contracts\Data;
 
-interface ClassRoomData{}
+use Spatie\LaravelData\Contracts\BaseData;
+
+interface ClassRoomData extends BaseData{}

@@ -6,7 +6,7 @@ use Hanafalah\LaravelSupport\Supports\PackageManagement;
 
 class BaseModuleClassRoom extends PackageManagement
 {
-    /** @var array */
+    protected $__config_name = 'module-class-room';
     protected $__module_class_room_config = [];
 
     /**
@@ -18,6 +18,6 @@ class BaseModuleClassRoom extends PackageManagement
      */
     public function __construct()
     {
-        $this->setConfig('module-class-room', $this->__module_class_room_config);
+        $this->setConfig($this->__config_name, $this->__module_class_room_config);
     }
 }

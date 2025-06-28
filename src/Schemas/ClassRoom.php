@@ -14,8 +14,8 @@ class ClassRoom extends PackageManagement implements Contracts\Schemas\ClassRoom
 
     protected array $__cache = [
         'index' => [
-            'name'     => 'class-room',
-            'tags'     => ['class-room', 'class-room-index'],
+            'name'     => 'class_room',
+            'tags'     => ['class_room', 'class_room-index'],
             'forever'  => 24*60*7
         ]
     ];
@@ -26,10 +26,11 @@ class ClassRoom extends PackageManagement implements Contracts\Schemas\ClassRoom
             'id' => $class_room_dto->id ?? null
         ], [
             'name'       => $class_room_dto->name,
-            'service_id' => $class_room_dto->service_id
+            'service_id' => $class_room_dto->service_id,
+            'daily_rate' => $class_room_dto->daily_rate
         ]);
         $this->fillingProps($class_room,$class_room_dto->props);
-        $this->forgetTags('class-room');
+        $class_room->save();
         return static::$class_room_model = $class_room;
     }
 }

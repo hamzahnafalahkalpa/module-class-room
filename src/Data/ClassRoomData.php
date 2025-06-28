@@ -16,6 +16,10 @@ class ClassRoomData extends Data implements DataClassRoomData{
     #[MapName('name')]
     public string $name;
 
+    #[MapInputName('daily_rate')]
+    #[MapName('daily_rate')]
+    public int $daily_rate = 0;
+
     #[MapInputName('service_id')]
     #[MapName('service_id')]
     public mixed $service_id = null;
@@ -23,4 +27,15 @@ class ClassRoomData extends Data implements DataClassRoomData{
     #[MapInputName('props')]
     #[MapName('props')]
     public ?array $props = null;
+
+    public static function after(self $data): self{
+        $new = self::new();
+
+        $props = &$data->props;
+
+        $service = $new->ServiceModel();
+        $service = isset($data->service_id) ? $service->findOrFail($data->service_id) : $service;
+        $props['prop_service'] = $service->toViewApi()->resolve();
+        return $data;
+    }
 }

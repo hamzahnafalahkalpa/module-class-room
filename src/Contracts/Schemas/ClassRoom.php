@@ -23,6 +23,4 @@ use Illuminate\Database\Eloquent\Model;
 * @method array storeClassRoom(?ClassRoomData $class_room_dto = null)
 * @method Builder classRoom(mixed $conditionals = null)
 */
-interface ClassRoom extends DataManagement
-{
-}
+interface ClassRoom extends DataManagement{}

@@ -20,10 +20,11 @@ class ViewClassRoom extends ApiResource
       'name'       => $this->name,
       'service_id' => $this->service_id,
       'service'    => $this->prop_service,
+      'daily_rate' => $this->daily_rate,
+      'status'     => $this->status,
       'created_at' => $this->created_at,
       'updated_at' => $this->updated_at
     ];
-
     return $arr;
   }
 }
