@@ -5,13 +5,11 @@ use Hanafalah\ModuleClassRoom\{
 };
 
 return [
-    'namespace' => 'Hanafalah\ModuleClassRoom',
+    'namespace' => 'Hanafalah\\ModuleClassRoom',
     'app' => [
-        'contracts'  => [
-        ],
-    ],
-    'commands'   => [
-        ModuleClassRoomCommands\InstallMakeCommand::class
+        'contracts' => [
+            //ADD YOUR CONTRACTS HERE
+        ]
     ],
     'libs' => [
         'model' => 'Models',
@@ -25,5 +23,8 @@ return [
     'database' => [
         'models' => [
         ]
+    ],
+    'commands'   => [
+        ModuleClassRoomCommands\InstallMakeCommand::class
     ]
 ];
