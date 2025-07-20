@@ -10,7 +10,7 @@ use Hanafalah\ModuleClassRoom\Contracts\Data\ClassRoomData;
 class ClassRoom extends PackageManagement implements Contracts\Schemas\ClassRoom
 {
     protected string $__entity = 'ClassRoom';
-    public static $class_room_model;
+    public $class_room_model;
 
     protected array $__cache = [
         'index' => [
@@ -31,6 +31,6 @@ class ClassRoom extends PackageManagement implements Contracts\Schemas\ClassRoom
         ]);
         $this->fillingProps($class_room,$class_room_dto->props);
         $class_room->save();
-        return static::$class_room_model = $class_room;
+        return $this->class_room_model = $class_room;
     }
 }
