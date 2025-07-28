@@ -4,6 +4,7 @@ namespace Hanafalah\ModuleClassRoom\Data;
 
 use Hanafalah\LaravelSupport\Supports\Data;
 use Hanafalah\ModuleClassRoom\Contracts\Data\ClassRoomData as DataClassRoomData;
+use Hanafalah\ModuleService\Contracts\Data\ServiceData;
 use Spatie\LaravelData\Attributes\MapInputName;
 use Spatie\LaravelData\Attributes\MapName;
 
@@ -20,9 +21,13 @@ class ClassRoomData extends Data implements DataClassRoomData{
     #[MapName('daily_rate')]
     public int $daily_rate = 0;
 
-    #[MapInputName('service_id')]
-    #[MapName('service_id')]
-    public mixed $service_id = null;
+    #[MapInputName('service_type_id')]
+    #[MapName('service_type_id')]
+    public mixed $service_type_id = null;
+
+    #[MapInputName('service')]
+    #[MapName('service')]
+    public ?ServiceData $service = null;
 
     #[MapInputName('props')]
     #[MapName('props')]
@@ -34,8 +39,8 @@ class ClassRoomData extends Data implements DataClassRoomData{
         $props = &$data->props;
 
         $service = $new->ServiceModel();
-        $service = isset($data->service_id) ? $service->findOrFail($data->service_id) : $service;
-        $props['prop_service'] = $service->toViewApi()->resolve();
+        $service = isset($data->service_type_id) ? $service->findOrFail($data->service_type_id) : $service;
+        $props['prop_service_type'] = $service->toViewApi()->resolve();
         return $data;
     }
 }

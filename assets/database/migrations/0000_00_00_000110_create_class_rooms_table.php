@@ -1,7 +1,6 @@
 <?php
 
 use Hanafalah\LaravelSupport\Concerns\NowYouSeeMe;
-use Hanafalah\ModuleTreatment\Enums\Treatment\TreatmentStatus;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -32,14 +31,14 @@ return new class extends Migration
             Schema::create($table_name, function (Blueprint $table) {
                 $table->ulid('id')->primary();
                 $table->string('name')->nullable(false);
-                $table->tinyInteger('status')->default(TreatmentStatus::ACTIVE->value);
+                $table->string('status',50)->default('ACTIVE');
                 $table->json('props')->nullable();
                 $table->timestamps();
                 $table->softDeletes();
             });
 
             Schema::table($table_name, function (Blueprint $table) {
-                $table->foreignIdFor($this->__table_medic_service)->nullable()
+                $table->foreignIdFor($this->__table_medic_service,'service_type_id')->nullable()
                       ->after('id')->index()->constrained()->cascadeOnUpdate()->restrictOnDelete();
             });
         }
