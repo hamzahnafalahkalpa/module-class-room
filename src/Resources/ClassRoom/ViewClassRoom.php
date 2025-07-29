@@ -21,7 +21,6 @@ class ViewClassRoom extends ApiResource
       'service_type_id' => $this->service_type_id,
       'service_type'    => $this->prop_service_type,
       'service'         => $this->prop_service,
-      'daily_rate'      => $this->daily_rate,
       'status'          => $this->status,
       'created_at'      => $this->created_at,
       'updated_at'      => $this->updated_at

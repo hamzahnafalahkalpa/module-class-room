@@ -30,7 +30,7 @@ class ClassRoom extends PackageManagement implements Contracts\Schemas\ClassRoom
 
         if (isset($class_room_dto->service)){
             $service_dto = &$class_room_dto->service;
-            $service_dto->reference_id   = $class_room->getMorphClass();
+            $service_dto->reference_id   = $class_room->getKey();
             $service_dto->reference_type = $class_room->getMorphClass();
             $service = $this->schemaContract('service')->prepareStoreService($service_dto);
             $class_room_dto->props['props_service'] = $service->toViewApi()->resolve();

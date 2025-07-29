@@ -17,10 +17,6 @@ class ClassRoomData extends Data implements DataClassRoomData{
     #[MapName('name')]
     public string $name;
 
-    #[MapInputName('daily_rate')]
-    #[MapName('daily_rate')]
-    public int $daily_rate = 0;
-
     #[MapInputName('service_type_id')]
     #[MapName('service_type_id')]
     public mixed $service_type_id = null;
@@ -32,6 +28,12 @@ class ClassRoomData extends Data implements DataClassRoomData{
     #[MapInputName('props')]
     #[MapName('props')]
     public ?array $props = null;
+
+    public static function before(array &$attributes){
+        if (isset($attributes['service'])){
+            $attributes['service']['name'] ??= $attributes['name'];
+        }
+    }
 
     public static function after(self $data): self{
         $new = self::new();
