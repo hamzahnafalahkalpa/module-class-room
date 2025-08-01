@@ -33,7 +33,7 @@ class ClassRoom extends PackageManagement implements Contracts\Schemas\ClassRoom
             $service_dto->reference_id   = $class_room->getKey();
             $service_dto->reference_type = $class_room->getMorphClass();
             $service = $this->schemaContract('service')->prepareStoreService($service_dto);
-            $class_room_dto->props['props_service'] = $service->toViewApi()->resolve();
+            $class_room_dto->props['prop_service'] = $service->toViewApi()->resolve();
         }
 
         $this->fillingProps($class_room,$class_room_dto->props);
