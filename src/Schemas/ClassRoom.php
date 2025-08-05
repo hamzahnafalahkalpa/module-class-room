@@ -36,6 +36,11 @@ class ClassRoom extends PackageManagement implements Contracts\Schemas\ClassRoom
             $class_room_dto->props['prop_service'] = $service->toViewApi()->resolve();
         }
 
+        if (isset($class_room_dto->service_type_id)){
+            $service_type_model = $this->ServiceModel()->findOrFail($class_room_dto->service_type_id);
+            $class_room_dto->props['prop_service_type'] = $service_type_model->toViewApi()->resolve();
+        }
+
         $this->fillingProps($class_room,$class_room_dto->props);
         $class_room->save();
         return $this->class_room_model = $class_room;
