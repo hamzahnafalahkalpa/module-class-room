@@ -2,9 +2,9 @@
     "name": "hanafalah/module-class-room",
     "description": "Master Module Class Room",
     "require": {
-        "hanafalah/laravel-support": "dev-main as 1.0",
-        "hanafalah/module-service": "dev-main as 1.0",
-        "hanafalah/module-warehouse": "dev-main as 1.0"
+        "hanafalah/laravel-support": "dev-main",
+        "hanafalah/module-service": "dev-main",
+        "hanafalah/module-warehouse": "dev-main"
     },
     "autoload": {
         "psr-4": {
