@@ -16,12 +16,5 @@
             "name": "hamzah",
             "email": "hamzahnafalah@gmail.com"
         }
-    ],
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Hanafalah\\ModuleClassRoom\\ModuleClassRoomServiceProvider"
-            ]
-        }
-    }
+    ]
 }
