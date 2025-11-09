@@ -31,7 +31,6 @@ return new class extends Migration
             Schema::create($table_name, function (Blueprint $table) {
                 $table->ulid('id')->primary();
                 $table->string('name')->nullable(false);
-                $table->string('room_number')->nullable(true);
                 $table->string('status',50)->default('ACTIVE');
                 $table->json('props')->nullable();
                 $table->timestamps();
