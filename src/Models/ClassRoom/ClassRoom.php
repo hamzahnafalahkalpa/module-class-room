@@ -52,7 +52,7 @@ class ClassRoom extends BaseModel
         return ClassRoomStatus::from($status ?? $this->status)->value;
     }
 
-    protected function isUsingService(): bool{
+    public function isUsingService(): bool{
         return true;
     }
 
